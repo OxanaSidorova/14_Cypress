@@ -1,0 +1,25 @@
+{
+  "name": "cypress1",
+  "version": "1.0.0",
+  "description": "cypress test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OxanaSidorova/14_Cypress.git"
+  },
+  "keywords": [
+    "cypress"
+  ],
+  "author": "OSidorova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OxanaSidorova/14_Cypress/issues"
+  },
+  "homepage": "https://github.com/OxanaSidorova/14_Cypress#readme",
+  "dependencies": {
+    "cypress": "^12.7.0"
+  }
+}
