@@ -8,7 +8,7 @@ describe ("landed page",()=> {
 
      it("check a box page", ()=> {
         cy.visit("")
-      cy.find('type=text').should('have text', 'Создать коробку')
+      cy.find('[class="txt-buttons txt txt--white"]').should('have text', 'Создать коробку')
 
      })
      it("create a new box", ()=> {

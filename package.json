@@ -4,8 +4,12 @@
   "description": "cypress test",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-    
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:run": "npx cypress run",
+    "cy:run:15.2":"npm run cy:run --spec 'cypress/e2e/15.2.cy.js'",
+    "cy:run:first":"npm run cy:run --spec 'cypress/e2e/firstTest.cy.js'",
+    "cy:run:14.2":"npm run cy:run --spec 'cypress/e2e/s14.2_santa.cy.js'"
+   
   },
   "repository": {
     "type": "git",
