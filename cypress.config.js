@@ -5,7 +5,6 @@ const { defineConfig } = require("cypress");
 //   // The rest of the Cypress config options go here...
 // }
 
-
 module.exports = defineConfig({
   projectId: '1j7ygf', 
   e2e: {

@@ -1,13 +1,31 @@
 // const { should } = require("chai")
 // const { find } = require("cypress/types/lodash")
 
+// const { should } = require("chai")
+// const cypress = require("cypress")
+
 describe ("landed page",()=> {
-    it("check page after login", ()=> {
-    cy.visit("")
-     })
+    it("check page  login", ()=> {
+   //  Cypress.config("baseUrl", "https://staging.lpitko.ru/")
+    })
+
+    it("login", ()=> {
+   cy.visit("/login"),
+   cy.get("[name='email']").type('oxana.s.sidorova@gmail.com'),
+   cy.get("[name='password']").type(333338),
+   cy.get('class=btn-main base--clickable').click(),
+   cy.url().should("contain", "/api/session")
+
+})
+
+     it("check page after login", ()=> {
+      cy.visit("/login")
+       })
+       it("authorised ")
+      })
 
      it("check a box page", ()=> {
-        cy.visit("")
+        cy.visit("/api/session")
       cy.find('[class="txt-buttons txt txt--white"]').should('have text', 'Создать коробку')
 
      })
@@ -30,7 +48,4 @@ describe ("landed page",()=> {
             cy.visit("/account")
 
              })
-})
-
-
-
+      
