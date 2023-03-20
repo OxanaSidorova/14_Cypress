@@ -1,51 +1,48 @@
 // const { should } = require("chai")
 // const { find } = require("cypress/types/lodash")
 
+// const { contains } = require("cypress/types/jquery")
+
 // const { should } = require("chai")
 // const cypress = require("cypress")
+// beforeEach(() => {
 
-describe ("landed page",()=> {
-    it("check page  login", ()=> {
-   //  Cypress.config("baseUrl", "https://staging.lpitko.ru/")
-    })
+describe ("login",()=> {
+//    beforeEach(() => {
+ 
+    it("login correct", ()=> {
+//    //  Cypress.config("baseUrl", "https://staging.lpitko.ru/")
 
-    it("login", ()=> {
    cy.visit("/login"),
    cy.get("[name='email']").type('oxana.s.sidorova@gmail.com'),
    cy.get("[name='password']").type(333338),
-   cy.get('class=btn-main base--clickable').click(),
-   cy.url().should("contain", "/api/session")
-
+   cy.get('.btn-main').click(),
+   cy.get('.header > [href="/"] > :nth-child(1)')
+ })
 })
-
-     it("check page after login", ()=> {
-      cy.visit("/login")
-       })
-       it("authorised ")
+   describe ("check my boxes",()=>{
+      it("boxes page",()=>{
+         cy.visit("/account/boxes"),
+         cy.get('.toggle-menu-item--active > .txt--med')
       })
-
-     it("check a box page", ()=> {
-        cy.visit("/api/session")
-      cy.find('[class="txt-buttons txt txt--white"]').should('have text', 'Создать коробку')
-
-     })
-     it("create a new box", ()=> {
-      cy.visit("/box/new")
-      find('input[frm=text')
-      it ('can add a new box name', ()=>{
-         const newName="Newbox"
-         cy.get("input[type=text]").type(`${newName}{enter}`)
-         cy.should('have.text', newName)
-      })
-
    })
-
+   describe ("crete a new boxe",()=>{
+      it("create a new box", ()=> {
+         cy.visit("/box/new"),
+          find('input[frm=text')
+            it ('can add a new box name', ()=>{
+                const newName="Newbox"
+               cy.get("input[type=text]").type(`${newName}{enter}`)
+               cy.should('have.text', newName)
+               })
+            })
+         })
+         describe ("crete a new boxe",()=>{
      it("fast randomizer", ()=> {
         cy.visit("/randomizer")
         find("input[type=text]")
          })
-         it("check account", ()=> {
+      it("check account", ()=> {
             cy.visit("/account")
-
-             })
-      
+         })
+      })
