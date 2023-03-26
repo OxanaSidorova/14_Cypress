@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cy:run": "npx cypress run",
+    "cy:run": "cypress run",
     "cy:open": "npx cypress open",
-    "cy:run:15.2":"npm run cy:run --spec 'cypress/e2e/15.2.cy.js'",
-    "cy:run:first":"npm run cy:run --spec 'cypress/e2e/firstTest.cy.js'",
-    "cy:run:14.2":"npm run cy:run --spec 'cypress/e2e/s14.2_santa.cy.js'"
+    "cy:run:15.2":"npm run cy:run --spec cypress/e2e/15.2.cy.js",
+    "cy:run:first":"npm run cy:run --spec cypress/e2e/firstTest.cy.js",
+    "cy:run:15.2.2":"npm run cy:run --spec 'cypress/e2e/15.2.2.cy.js'",
+    "cy:run:both":"npm run cy:run:15.2 && npm run cy:run:15.2.2"
    
   },
   "repository": {

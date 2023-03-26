@@ -1,6 +1,9 @@
 
 describe ("check links",()=> {
+    it('has access to clipboard', { browser: 'electron' }, () => {
     it ("boxes",()=>{
+        Cypress.config("baseUrl", "https://staging.lpitko.ru/")
+
         cy.visit("/login"),
         cy.get("[class='txt--med txt-Коробки-txt']"),
         cy.get("[class='txt-buttons txt txt--white-Создать коробку-']"),
@@ -9,4 +12,5 @@ describe ("check links",()=> {
 
     })
     //    beforeEach(() => {
+})
 })
