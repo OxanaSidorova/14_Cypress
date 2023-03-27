@@ -17,9 +17,10 @@ beforeEach(() => {
    cy.get("[name='email']").type('oxana.s.sidorova@gmail.com'),
    cy.get("[name='password']").type(333338),
    cy.get('.btn-main').click(),
-   cy.wait(500)
-   cy.visit("/api/account"),
-   cy.get('.header > [href="/"] > :nth-child(1)')
+   // cy.wait(500)
+   // cy.visit("/api/account"),
+   cy.contains("Коробки").should("exist");
+   // cy.get('.header > [href="/"] > :nth-child(1)')
  })
 // })
    // describe ("check my boxes",()=>{
