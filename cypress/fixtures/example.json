@@ -1,11 +1,16 @@
 
-  { 
+ [ { 
   "password": "333338",
   "email": "oxana.s.sidorova@gmail.com"
+},
 
- } "password": "333338",
-  "email": "oxana.s.sidorova",
+ {
+ "password": "333338",
+  "email": "oxana.s.sidorova"
+},
 
+{
 "password": "333338",
 "email": " "
   }
+ ]

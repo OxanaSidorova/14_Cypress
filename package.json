@@ -7,11 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "cy:run": "cypress run",
     "cy:open": "npx cypress open",
-    "cy:run:15.2":"npm run cy:run --spec cypress/e2e/15.2.cy.js",
-    "cy:run:first":"npm run cy:run --spec cypress/e2e/firstTest.cy.js",
-    "cy:run:15.2.2":"npm run cy:run --spec 'cypress/e2e/15.2.2.cy.js'",
-    "cy:run:both":"npm run cy:run:15.2 && npm run cy:run:15.2.2"
-   
+    "cy:run:15.2": "npm run cy:run --spec cypress/e2e/15.2.cy.js",
+    "cy:run:first": "npm run cy:run --spec cypress/e2e/firstTest.cy.js",
+    "cy:run:15.2.2": "npm run cy:run --spec 'cypress/e2e/15.2.2.cy.js'",
+    "cy:run:both": "npm run cy:run:15.2 && npm run cy:run:15.2.2"
   },
   "repository": {
     "type": "git",
@@ -28,5 +27,8 @@
   "homepage": "https://github.com/OxanaSidorova/14_Cypress#readme",
   "dependencies": {
     "cypress": "^12.7.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0"
   }
 }
