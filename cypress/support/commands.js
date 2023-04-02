@@ -38,12 +38,28 @@ Cypress.Commands.add('enterLogin',(selector, email) => {
     cy.get(selector).type(email);
 });
 
-Cypress.Commands.add("valigLogin")
-
+// Cypress.Commands.add("validLogin")
 
 Cypress.Commands.add('changePassword',(typeUserName, newPassword)=>{
     cy.contains(typeUserName).click({force: true});
     cy.get(".layout-column-start > :nth-child(1) > .frm").type(newPassword);
     cy.get(':nth-child(4) > .form-page-group__main > .layout-column-start > :nth-child(2) > .frm').type(newPassword);
     cy.get('.layout-row-end > .btn-service').click()
+    });
+
+    Cypress.Commands.add("apiLoginOldPassword",(email,oldPassword) => {
+      cy.request({
+        method: "POST",
+        headers:{
+            selectorCookie },
+        url:"/login",
+        body:[
+          {password:oldPassword},
+          {email:email}
+      ]
+    }).then((response)=> {
+        expect(response.status).to.equal(200);
+    });
     })
+
+    

@@ -1,4 +1,6 @@
 
+<reference types="cypress" /> 
+
 describe ("check links",()=> {
     it('has access to clipboard', { browser: 'electron' }, () => {
     it ("boxes",()=>{
