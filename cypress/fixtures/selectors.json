@@ -1,0 +1,6 @@
+{
+    "selectorEmail": "[name='email']",
+    "selectorButton":".btn-main'",
+    "selectorPassword" : "[name='password']"
+  
+}

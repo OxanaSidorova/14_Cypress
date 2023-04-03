@@ -1,16 +1,16 @@
 
- [ { 
+ {
+  "correct": { 
   "password": "333338",
   "email": "oxana.s.sidorova@gmail.com"
 },
-
- {
+"wrongEmail": {
  "password": "333338",
   "email": "oxana.s.sidorova"
 },
 
-{
+"blancEmail": {
 "password": "333338",
 "email": " "
   }
- ]
+}

@@ -38,6 +38,19 @@ Cypress.Commands.add('enterLogin',(selector, email) => {
     cy.get(selector).type(email);
 });
 
+const regselectors = require("../fixtures/selectors.json")
+Cypress.Commands.add('validLogin16', (email, password)  => { 
+  cy.enterLogin(email),
+
+  cy.get(regselectors.selectorPassword).type(password),
+  cy.get(regselectors.selectorButton).click(),
+  cy.request("/api/login?redirect=%2F")
+ cy.get("[class='base--clickable header-item header-item--right']").should ("have.text", "OxanaOxana")
+})
+
+
+
+
 // Cypress.Commands.add("validLogin")
 
 Cypress.Commands.add('changePassword',(typeUserName, newPassword)=>{

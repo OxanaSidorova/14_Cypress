@@ -15,6 +15,9 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+import '../fixtures/loginPageElements.json'
+import'../fixtures/example.json'
+import'../fixtures/selectors.json'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
