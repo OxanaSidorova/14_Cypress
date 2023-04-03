@@ -47,7 +47,8 @@ Cypress.Commands.add('changePassword',(typeUserName, newPassword)=>{
     cy.get('.layout-row-end > .btn-service').click()
     });
 
-    Cypress.Commands.add("apiLoginOldPassword",(email,oldPassword) => {
+   
+    Cypress.Commands.add("apiLoginOldPassword",(typeEmail,oldPassword,selectorCookie) => {
       cy.request({
         method: "POST",
         headers:{
@@ -55,7 +56,7 @@ Cypress.Commands.add('changePassword',(typeUserName, newPassword)=>{
         url:"/login",
         body:[
           {password:oldPassword},
-          {email:email}
+          {email:typeEmail}
       ]
     }).then((response)=> {
         expect(response.status).to.equal(200);

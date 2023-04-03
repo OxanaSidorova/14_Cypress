@@ -10,7 +10,12 @@
     "cy:run:15.2": "npm run cy:run --spec cypress/e2e/15.2.cy.js",
     "cy:run:first": "npm run cy:run --spec cypress/e2e/firstTest.cy.js",
     "cy:run:15.2.2": "npm run cy:run --spec 'cypress/e2e/15.2.2.cy.js'",
-    "cy:run:both": "npm run cy:run:15.2 && npm run cy:run:15.2.2"
+    "cy:run:both": "npm run cy:run:15.2 && npm run cy:run:15.2.2",
+    "cy:run:chrome": " npx cypress run --config-file cypress-2.config.js --spec cypress/e2e/15.2.cy.js --browser chrome --record --key тут необходимо указать ключ проекта",
+    "cy:run:electron": " npx cypress run --config-file cypress-2.config.js --spec cypress/e2e/15.2.cy.js --browser chrome --record --key тут необходимо указать ключ проекта",
+    "cy:run:chrome+electrone": " npm run cy:run:chrome:1&&y:run:electron:2"
+
+
   },
   "repository": {
     "type": "git",
